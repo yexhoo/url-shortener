@@ -8,6 +8,11 @@
     "test": "NODE_ENV=test jest --coverage --detectOpenHandles --forceExit",
     "lint": "eslint src/"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test && npm run lint"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yexhoo/url-shortener.git"
@@ -66,6 +71,7 @@
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "2.25.4",
     "eslint-plugin-jest": "25.3.4",
+    "husky": "7.0.4",
     "jest": "27.4.7",
     "jest-sonar-reporter": "2.0.0",
     "npm": "8.11.0",
