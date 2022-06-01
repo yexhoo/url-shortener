@@ -56,7 +56,8 @@
     "reportFile": "test-report.xml"
   },
   "dependencies": {
-    "ansi-regex": "6.0.1"
+    "ansi-regex": "6.0.1",
+    "is-valid-http": "2.0.1"
   },
   "devDependencies": {
     "@types/jest": "27.4.0",
