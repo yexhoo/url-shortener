@@ -4,7 +4,8 @@
   "description": "A URL Shortener is a service that creates short aliases for URLs. It generates a shortcode for a URL and then redirects the user to the URL when that code is accessed.",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist/ && tsc -p ."
+    "build": "rm -rf dist/ && tsc -p .",
+    "test": "NODE_ENV=test jest --coverage --detectOpenHandles --forceExit"
   },
   "repository": {
     "type": "git",
@@ -23,12 +24,45 @@
   "engines": {
     "node": "14.17.6"
   },
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "testMatch": [
+      "**/?(*.)+(test).+(ts|js)"
+    ],
+    "transform": {
+      "^.+\\.(ts)$": "ts-jest"
+    },
+    "testResultsProcessor": "jest-sonar-reporter",
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "src/**/*.js"
+    ],
+    "setupFiles": [
+      "<rootDir>/jestSetup.js"
+    ],
+    "testEnvironment": "node",
+    "verbose": true
+  },
+  "jestSonar": {
+    "reportPath": "coverage",
+    "reportFile": "test-report.xml"
+  },
   "dependencies": {
     "ansi-regex": "6.0.1"
   },
   "devDependencies": {
+    "@types/jest": "27.4.0",
     "@types/node": "17.0.8",
+    "jest": "27.4.7",
+    "jest-sonar-reporter": "2.0.0",
     "npm": "8.11.0",
+    "ts-jest": "27.1.2",
     "ts-node": "10.4.0",
     "typescript": "4.5.4"
   }
