@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rm -rf dist/ && tsc -p .",
     "test": "NODE_ENV=test jest --coverage --detectOpenHandles --forceExit",
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -66,6 +67,7 @@
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "2.25.4",
     "eslint-plugin-jest": "25.3.4",
+    "husky": "8.0.0",
     "jest": "27.4.7",
     "jest-sonar-reporter": "2.0.0",
     "npm": "8.11.0",
