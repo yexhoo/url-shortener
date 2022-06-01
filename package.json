@@ -1,0 +1,23 @@
+{
+  "name": "url-shortener",
+  "version": "0.0.1",
+  "description": "A URL Shortener is a service that creates short aliases for URLs. It generates a shortcode for a URL and then redirects the user to the URL when that code is accessed.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yexhoo/url-shortener.git"
+  },
+  "keywords": [
+    "url",
+    "shortener"
+  ],
+  "author": "Yexhoo (Josue Nolasco Miranda)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yexhoo/url-shortener/issues"
+  },
+  "homepage": "https://github.com/yexhoo/url-shortener#readme"
+}
