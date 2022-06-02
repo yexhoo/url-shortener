@@ -7,7 +7,9 @@
     "build": "rm -rf dist/ && tsc -p .",
     "test": "NODE_ENV=test jest --coverage --detectOpenHandles --forceExit",
     "lint": "eslint src/",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "start": "npm run build && node dist/app.js",
+    "dev": "NODE_ENV=development nodemon src/app.ts "
   },
   "repository": {
     "type": "git",
@@ -43,7 +45,8 @@
     "collectCoverage": true,
     "collectCoverageFrom": [
       "src/**/*.ts",
-      "src/**/*.js"
+      "src/**/*.js",
+      "!src/app.ts"
     ],
     "setupFiles": [
       "<rootDir>/jestSetup.js"
@@ -57,9 +60,11 @@
   },
   "dependencies": {
     "ansi-regex": "6.0.1",
+    "express": "4.17.2",
     "is-valid-http": "2.0.1"
   },
   "devDependencies": {
+    "@types/express": "4.17.13",
     "@types/jest": "27.4.0",
     "@types/node": "17.0.8",
     "@typescript-eslint/eslint-plugin": "5.9.0",
@@ -71,6 +76,7 @@
     "husky": "8.0.0",
     "jest": "27.4.7",
     "jest-sonar-reporter": "2.0.0",
+    "nodemon": "2.0.15",
     "npm": "8.11.0",
     "ts-jest": "27.1.2",
     "ts-node": "10.4.0",
