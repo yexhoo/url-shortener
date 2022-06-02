@@ -11,6 +11,6 @@ describe('Utils:Rule', () => {
 
   it('should return error when input data is not valid', async () => {
     const input = <IData>{ url: '12345'}
-    expect(check(input, validate)).rejects.toThrow('The url must be a valid link');
+    expect(check(input, validate)).rejects.toThrowError('The url must be a valid link');
   });
 });
