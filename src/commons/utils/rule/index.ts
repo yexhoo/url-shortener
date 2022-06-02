@@ -1,4 +1,4 @@
-export const check = (data:JSON, validateCallbackFunction:any): JSON => {
+export const check = async (data:JSON, validateCallbackFunction:any): Promise<JSON> => {
   const validations = validateCallbackFunction(data)
 
   if(Array.isArray(validations) && validations.length > 0) {

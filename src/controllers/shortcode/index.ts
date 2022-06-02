@@ -8,8 +8,8 @@ import { IData } from "../../commons/interfaces/shortcode";
 
 export const handlers = (app: Application) => {
   app.post('/shortcode', async function (req: Request, res: Response) {
-    ShortCode.create(<IData> req.body)
-      .then(received => { return check(received, validate) })
+    check(req.body, validate)
+      .then(validated => ShortCode.create(<IData>validated))
       .then(data => Handler.response(res, HTTP.OK, data) )
       .catch(err => Handler.error(res, HTTP.BAD_REQUEST, err) );
   });
