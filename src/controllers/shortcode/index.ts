@@ -1,11 +1,10 @@
 import Handler from "../../commons/handlers";
 import HTTP from '../../commons/constants/http';
+import { check  } from '../../commons/utils/rule'
 import * as ShortCode from "../../services/shortcode"
 import { Application, Request, Response } from "express";
-import { IData } from "../../commons/interfaces/shortcode";
-
-import { check  } from '../../commons/utils/rule'
 import { validate } from '../../rules/shortcode/validator'
+import { IData } from "../../commons/interfaces/shortcode";
 
 export const handlers = (app: Application) => {
   app.post('/shortcode', async function (req: Request, res: Response) {
