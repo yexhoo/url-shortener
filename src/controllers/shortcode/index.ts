@@ -10,7 +10,7 @@ import { validate } from '../../rules/shortcode/validator'
 export const handlers = (app: Application) => {
   app.post('/shortcode', async function (req: Request, res: Response) {
     ShortCode.create(<IData> req.body)
-      .then(d => { return check(d, validate) })
+      .then(received => { return check(received, validate) })
       .then(data => Handler.response(res, HTTP.OK, data) )
       .catch(err => Handler.error(res, HTTP.BAD_REQUEST, err) );
   });
