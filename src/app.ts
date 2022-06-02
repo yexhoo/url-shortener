@@ -1,6 +1,6 @@
-import http from './constants/http'
+import http from './commons/constants/http'
 import express, { Application } from "express";
-import * as Shortcode from './controller/shortcode'
+import * as Shortcode from './controllers/shortcode'
 
 const app: Application = express();
 app.use(express.json());

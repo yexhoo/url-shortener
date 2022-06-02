@@ -1,4 +1,4 @@
-import { IData } from '../../interface/shortcode';
+import { IData } from '../../commons/interfaces/shortcode';
 
 export const create = async (data : IData) => {
   console.log('>>>>>>>>>> data: ', data);

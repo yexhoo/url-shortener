@@ -1,9 +1,9 @@
 import Handler from "./index";
-import HTTP from '../../constants/http'
+import HTTP from '../constants/http'
 import { getMockReq } from '@jest-mock/express'
-import { IData } from "../../interface/shortcode";
+import { IData } from "../interfaces/shortcode";
 
-describe('Controller:Handler', () => {
+describe('Controllers:Commons:Handlers:Error', () => {
 
   it('should return success response', () => {
     const req: any = getMockReq({
