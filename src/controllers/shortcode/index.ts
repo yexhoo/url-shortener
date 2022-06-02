@@ -1,8 +1,8 @@
-import Handler from "../handler";
-import HTTP from '../../constants/http';
-import { IData } from "../../interface/shortcode";
-import * as ShortCode from "../../service/shortcode"
+import Handler from "../../commons/handlers";
+import HTTP from '../../commons/constants/http';
+import * as ShortCode from "../../services/shortcode"
 import { Application, Request, Response } from "express";
+import { IData } from "../../commons/interfaces/shortcode";
 
 export const handlers = (app: Application) => {
   app.post('/shortcode', async function (req: Request, res: Response) {
