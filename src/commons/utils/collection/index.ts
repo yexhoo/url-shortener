@@ -1,0 +1,1 @@
+export const getFirst = <T>(collection : T[]) : T => collection[0];
