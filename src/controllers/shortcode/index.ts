@@ -13,4 +13,10 @@ export const handlers = (app: Application) => {
       .then(data => Handler.response(res, HTTP.OK, data) )
       .catch(err => Handler.error(res, HTTP.BAD_REQUEST, err) );
   });
+
+  app.get('/shortcode/:code?', async function (req: Request, res: Response) {
+    ShortCode.get(req.params.code)
+      .then(data => Handler.response(res, HTTP.OK, data))
+      .catch(err => Handler.error(res, HTTP.NOT_FOUND, err));
+  });
 }
