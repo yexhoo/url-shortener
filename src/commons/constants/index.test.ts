@@ -9,6 +9,7 @@ describe('Constants', () => {
     expect(entries[1][1]).toEqual(Http.RUNNING_SERVER);
     expect(entries[2][1]).toEqual(Http.OK);
     expect(entries[3][1]).toEqual(Http.BAD_REQUEST);
+    expect(entries[4][1]).toEqual(Http.NOT_FOUND);
   });
 
   it('Succes Http', () => {
