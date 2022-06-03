@@ -1,7 +1,7 @@
 import { validate } from './index';
 import { ValidationError } from 'fastest-validator';
 import { getFirst } from '../../../commons/utils/collection';
-import { IData } from '../../../commons/interfaces/shortcode';
+import { IData } from '../../../commons/interfaces/business';
 
 describe('Validators::Shortcode', () => {
   let data: IData;

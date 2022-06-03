@@ -1,7 +1,7 @@
 import Handler from "./index";
 import HTTP from '../constants/http'
 import { getMockReq } from '@jest-mock/express'
-import { IData } from "../interfaces/shortcode";
+import { IData } from "../interfaces/business";
 
 describe('Controllers:Commons:Handlers:Error', () => {
 

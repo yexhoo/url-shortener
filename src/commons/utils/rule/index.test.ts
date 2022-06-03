@@ -1,6 +1,6 @@
 import { check } from "./index";
 import { validate } from '../../../rules/shortcode/validator'
-import { IData } from "../../../commons/interfaces/shortcode";
+import { IData } from "../../interfaces/business";
 
 describe('Utils:Rule', () => {
   it('should return same data when does not exist validation errors', async () => {

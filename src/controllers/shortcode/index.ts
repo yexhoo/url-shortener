@@ -4,7 +4,7 @@ import { check  } from '../../commons/utils/rule'
 import * as ShortCode from "../../services/shortcode"
 import { Application, Request, Response } from "express";
 import { validate } from '../../rules/shortcode/validator'
-import { IData } from "../../commons/interfaces/shortcode";
+import { IData } from "../../commons/interfaces/business";
 
 export const handlers = (app: Application) => {
   app.post('/shortcode', async function (req: Request, res: Response) {
