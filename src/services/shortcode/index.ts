@@ -6,7 +6,13 @@ import { getShorterLink } from '../../commons/utils/url'
 
 export const create = async (data : IData) : Promise<JSON> => {
   const { url } = data
-  const code = build();
-  await Repository.create(<IShortcode>{ code, url });
-  return <IData> { url: getShorterLink(url, code) };  
+  const record = await Repository.findByUrl(url);
+
+  if(!record) {
+    const code = build();
+    await Repository.create(<IShortcode>{ code, url });  
+    return <IData> { url: getShorterLink(url, code) };    
+  } 
+  
+  return <IData> { url: getShorterLink(url, record.code) };    
 };
