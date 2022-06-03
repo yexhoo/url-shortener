@@ -15,5 +15,6 @@ describe('Constants', () => {
     const entries = Object.entries(Utils);
     expect(Array.isArray(entries)).toBeTruthy();
     expect(entries[0][1]).toEqual(Utils.RANDOM_CODE_LENGTH);
+    expect(entries[1][1]).toEqual(Utils.SHORTENER_DOMAIN);
   });
 });

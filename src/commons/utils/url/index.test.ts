@@ -1,4 +1,5 @@
-import { isValid } from "./index";
+import { isValid, getShorterLink } from "./index";
+import Utils from '../../constants/utils'
 
 describe('Utils:Url', () => {
   let urls:Array<string>;
@@ -7,7 +8,7 @@ describe('Utils:Url', () => {
     urls = [];
   });
 
-  it('Success test cases', () => {
+  it('Should return true for valid test cases', () => {
     urls = [
       'https://example.com',
       'https://example.com/abc123',
@@ -21,7 +22,7 @@ describe('Utils:Url', () => {
     urls.forEach(url => { expect(isValid(url)).toBeTruthy();});
   });
 
-  it('Invalid test cases', () => {
+  it('Should return false for invalid test cases', () => {
     const urls = [
       'example.com',
       'https://example',
@@ -30,5 +31,14 @@ describe('Utils:Url', () => {
       'notvalidurl',
     ];
     urls.forEach(url => { expect(isValid(url)).toBeFalsy();});
+  });
+
+  it('shouild return valid shortener link', () => {
+    const code = '12345'
+    const protocol = 'https:'
+    const domain = '//www.google.com'
+    const link = `${protocol}${domain}`;
+    const shorterLink = getShorterLink(link, code);
+    expect(shorterLink).toEqual(`${protocol}${Utils.SHORTENER_DOMAIN}${code}`)
   });
 });
