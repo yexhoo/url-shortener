@@ -46,4 +46,3 @@ dist
 .migrate
 .DS_Store
 .vscode/
-.db
