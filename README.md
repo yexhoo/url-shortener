@@ -122,7 +122,7 @@ curl --location --request GET 'http://localhost:3000/shortcode/jgas2k7n'
 ```
 Expected output
 ```shell
-{"url":"https://my.domain.com"}
+{"url":"https://www.google.com"}
 ```
 
 ## Shortcode (POST)
@@ -136,7 +136,7 @@ Type the following command
 curl --location --request POST 'http://localhost:3000/shortcode' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "url": "https://www.google.1.com"
+    "url": "https://my.domain.com"
 }'
 ```
 Expected output
