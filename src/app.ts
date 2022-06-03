@@ -1,8 +1,8 @@
 import http from './commons/constants/http'
 import * as Boot from "./commons/setup/boot"
 import express, { Application } from "express";
-import * as Shortcode from './controllers/shortcode'
 import * as Logger from './commons/utils/logger'
+import * as Shortcode from './controllers/shortcode'
 
 const app: Application = express();
 app.use(express.json());

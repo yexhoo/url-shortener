@@ -1,5 +1,5 @@
-import { isValid, getShorterLink } from "./index";
 import Utils from '../../constants/utils'
+import { isValid, getShorterLink } from "./index";
 
 describe('Utils:Url', () => {
   let urls:Array<string>;
