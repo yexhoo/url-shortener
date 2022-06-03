@@ -1,0 +1,17 @@
+{
+  "development": {
+    "dialect": "sqlite",
+    "storage": "./sqlite3/shortener.db",
+    "seederStorage": "sequelize"
+  },
+  "test": {
+    "dialect": "sqlite",
+    "storage": "./sqlite3/shortener.db",
+    "seederStorage": "sequelize"
+  },
+  "production": {
+    "dialect": "sqlite",
+    "storage": "./sqlite3/shortener.db",
+    "seederStorage": "sequelize"
+  }
+}
