@@ -1,7 +1,7 @@
-import { TABLES } from '../../commons/database/naming'
 import * as DB from '../../commons/setup/database'
-import { IShortcode } from '../../commons/interfaces/models';
+import { TABLES } from '../../commons/database/naming'
 import * as Audit from '../../commons/utils/audit'
+import { IShortcode } from '../../commons/interfaces/models';
 
 export const create = async (shortCode : IShortcode) : Promise<void> => {
   await DB.getModel(TABLES.SHORTCODE).create(Audit.create(shortCode));

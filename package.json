@@ -47,8 +47,8 @@
       "src/**/*.ts",
       "src/**/*.js",
       "!src/app.ts",
-      "!src/commons/database/migrations/**",
-      "!src/commons/database/seeders/**"
+      "!src/commons/database/**",
+      "!src/commons/setup/**"
     ],
     "setupFiles": [
       "<rootDir>/jestSetup.js"
