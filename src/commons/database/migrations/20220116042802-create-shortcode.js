@@ -10,11 +10,13 @@ module.exports = {
         primaryKey: true
       },
       code: {
-        type: Sequelize.STRING(6),
+        type: Sequelize.STRING(8),
+        unique: true,
         allowNull: false
       },
       url: {
-        type: Sequelize.STRING(2048),
+        type: Sequelize.STRING(300),
+        unique: true,
         allowNull: false
       },
       createdAt: {
@@ -26,6 +28,8 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
+    await queryInterface.addIndex(TABLES.SHORTCODE, ['url']);
+    await queryInterface.addIndex(TABLES.SHORTCODE, ['code']);
   },
   async down(queryInterface) {
     await queryInterface.dropTable(TABLES.SHORTCODE);
